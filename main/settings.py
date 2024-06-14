@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-ciarangriffi-recipe2024-k850cnkaff1.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-ciarangriffi-recipe2024-iwps1olyr68.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 
 # Application definition
@@ -74,6 +74,7 @@ DJRICHTEXTFIELD_CONFIG = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -129,7 +130,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-ciarangriffi-recipe2024-k850cnkaff1.ws.codeinstitute-ide.net'
+    'https://8000-ciarangriffi-recipe2024-iwps1olyr68.ws.codeinstitute-ide.net'
 ]
 
 
@@ -183,6 +184,7 @@ LOGIN_REDIRECT_URL = '/'
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Cloudinary Settings
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

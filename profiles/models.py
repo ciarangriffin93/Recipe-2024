@@ -20,7 +20,7 @@ class Profile(models.Model):
         blank=False,
     )
     bio = RichTextField(max_length=2500, null=True, blank=True)
-
+    
     def __str__(self):
         return str(self.user.username)
 
@@ -29,4 +29,5 @@ class Profile(models.Model):
 def create_user_profile(instance, created, **kwargs):
     """Create or update the user profile"""
     if created:
+        
         Profile.objects.create(user=instance)
