@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-ciarangriffi-recipe2024-nikbw1zjsl9.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-ciarangriffi-recipe2024-k850cnkaff1.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'recipes',
+    'profiles',
 
     # Other
     'crispy_forms',
@@ -128,7 +129,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-ciarangriffi-recipe2024-nikbw1zjsl9.ws.codeinstitute-ide.net'
+    'https://8000-ciarangriffi-recipe2024-k850cnkaff1.ws.codeinstitute-ide.net'
 ]
 
 
